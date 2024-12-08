@@ -7,9 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      colors: {},
+      fontFamily: {
+        my: ["monospace"],
+        roboto: ["var(--font-roboto)"],
+        inter: ["var(--font-inter)"],
+        playfair: ["var(--font-playfair)"],
+        geist: ["var(--font-geist)"],
+        cabinet: ["var(--font-cabinet)"],
       },
     },
   },
