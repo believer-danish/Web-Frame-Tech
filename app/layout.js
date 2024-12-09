@@ -1,5 +1,11 @@
 import localFont from "next/font/local";
-import { Roboto, Inter, Playfair_Display, Geist } from "next/font/google";
+import {
+  Roboto,
+  Inter,
+  Playfair_Display,
+  Geist,
+  Poppins,
+} from "next/font/google";
 import "./globals.css";
 
 const cabinet = localFont({
@@ -51,6 +57,12 @@ const geist = Geist({
   display: "swap",
   variable: "--font-geist",
 });
+const poppins = Poppins({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 
 export const metadata = {
   title: "Web Frame Tech",
@@ -61,7 +73,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} ${inter.variable} ${playfair.variable} ${geist.variable} ${cabinet.variable}  `}
+        className={`${roboto.variable} ${inter.variable} 
+        ${playfair.variable} ${geist.variable}
+         ${cabinet.variable}  ${poppins.variable} `}
       >
         {children}
       </body>

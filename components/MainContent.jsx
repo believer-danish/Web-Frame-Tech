@@ -1,5 +1,11 @@
+import ProductDetail from "./ProductDetail";
+
 const MainContent = () => {
-  return <div>MainContent</div>;
+  return (
+    <main className="my-container  ">
+      <ProductDetail />
+    </main>
+  );
 };
 
 export default MainContent;

@@ -7,7 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        gray1: "#9C9C9C",
+        gray900: "#111928",
+      },
       fontFamily: {
         my: ["monospace"],
         roboto: ["var(--font-roboto)"],
@@ -15,6 +18,7 @@ module.exports = {
         playfair: ["var(--font-playfair)"],
         geist: ["var(--font-geist)"],
         cabinet: ["var(--font-cabinet)"],
+        poppins: ["var(--font-poppins)"],
       },
     },
   },
