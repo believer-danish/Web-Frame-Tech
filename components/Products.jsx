@@ -4,8 +4,8 @@ const Products = () => {
   return (
     <section className="  pt-[50px] px-[30px]">
       {/*Heading  */}
-      <div className="flex items-center justify-between pb-[30px] ">
-        <h1 className="whitespace-pre font-cabinet font-medium text-gray3939 text-4xl">
+      <div className="flex items-center flex-wrap justify-between pb-[30px] ">
+        <h1 className="whitespace-pre-wrap font-cabinet font-medium text-gray3939 text-4xl">
           Ces produits pourraient vous intéresser
         </h1>
         <h2 className="whitespace-pre font-cabinet font-medium text-gray3939 underline">

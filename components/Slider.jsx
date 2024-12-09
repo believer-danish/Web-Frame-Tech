@@ -15,7 +15,7 @@ const Slider = () => {
   return (
     <section className="my-container p-[30px] relative ">
       {/*Heading  */}
-      <div className="flex items-center justify-between pb-[30px] ">
+      <div className="flex items-center flex-wrap justify-between pb-[30px] ">
         <h1 className="whitespace-pre font-cabinet font-medium text-gray3939 text-4xl">
           Articles similaires
         </h1>

@@ -3,14 +3,14 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="font-cabinet font-bold border-t pb-[417px] pt-10">
-      <div className="my-container flex justify-between ">
+      <div className="my-container flex justify-between max-md:flex-col ">
         {/* Links */}
-        <div className="flex gap-10">
+        <div className="flex  gap-10">
           <div className="flex-shrink-0">
             <Image src="/logo.png" alt="logo" width={"133"} height={"66"} />
           </div>
 
-          <div className="flex gap-20">
+          <div className="flex max-md:flex-col gap-20">
             <div>
               <h1 className="text-[18px]">INFOS PRATIQUES</h1>
               <h2 className="font-geist text-sm font-normal text-gray3939">
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         {/* Social Links */}
-        <div className="text-center flex flex-col gap-3">
+        <div className="text-center flex flex-col gap-3 items-center justify-center mt-8">
           <h1>NOUS SUIVRE</h1>
           <div className="flex gap-3">
             <div className="p-2 relative border rounded-lg cursor-pointer">

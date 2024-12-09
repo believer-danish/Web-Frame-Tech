@@ -9,7 +9,7 @@ const Contact = () => {
       </div>
 
       {/* right side  */}
-      <div className="w-[818px] bg-[#FFF3F9] rounded-xl p-9 flex gap-5 flex-col  ">
+      <div className="flex-1 bg-[#FFF3F9] rounded-xl p-9 flex gap-5 flex-col  ">
         <h1 className="font-cabinet font-medium text-[43px]">
           S’inscrire & économiser <span className="text-[#5CD2DD]">10%</span>
         </h1>
@@ -23,7 +23,7 @@ const Contact = () => {
           <input
             type="text"
             placeholder="john@doe.com"
-            className="flex-1 outline-none px-4 border rounded-lg"
+            className="flex-1 outline-none px-4 border rounded-lg w-full"
           />
           <div className="bg-[#5CD2DD] text-white flex font-cabinet font-bold text-[18px]  items-center justify-center uppercase gap-2  p-4 rounded-lg">
             S’inscrire
