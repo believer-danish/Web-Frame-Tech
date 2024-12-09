@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         gray1: "#9C9C9C",
         gray900: "#111928",
+        gray3939: "#393939",
       },
       fontFamily: {
         my: ["monospace"],
