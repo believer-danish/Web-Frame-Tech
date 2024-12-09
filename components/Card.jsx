@@ -1,16 +1,35 @@
+import MyContext from "@/utils/MyContext";
 import Image from "next/image";
+import { useContext, useState } from "react";
 
 const Card = () => {
+  const data = useContext(MyContext);
+
+  const [isLike, setIsLike] = useState(false);
+  const handleLikes = () => {
+    setIsLike((prev) => !prev);
+    if (isLike) data.setLikes((prev) => prev - 1);
+    else data.setLikes((prev) => prev + 1);
+  };
   return (
-    <div className=" flex flex-col gap-3">
+    <div className=" flex flex-col gap-3 cursor-pointer hover:scale-90 transition-all">
       <div className="bg-[#F9F7F5] py-5 px-3 rounded-md pb-[60px] ">
-        <div className="flex items-center justify-between ">
-          <Image
-            src="/heart2.png"
-            alt="heart icon"
-            width={"27"}
-            height={"27"}
-          />
+        <div
+          onClick={handleLikes}
+          className="flex items-center justify-between "
+        >
+          <div
+            className={`${
+              isLike && "bg-red-400"
+            } rounded-full p-1 motion-preset-pulse motion-duration-1000`}
+          >
+            <Image
+              src="/heart2.png"
+              alt="heart icon"
+              width={"27"}
+              height={"27"}
+            />
+          </div>
           <span className="text-[10px] font-geist font-medium text-[#111928]">
             Art de la table
           </span>

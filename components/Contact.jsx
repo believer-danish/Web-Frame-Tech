@@ -25,10 +25,17 @@ const Contact = () => {
             placeholder="john@doe.com"
             className="flex-1 outline-none px-4 border rounded-lg w-full"
           />
-          <div className="bg-[#5CD2DD] text-white flex font-cabinet font-bold text-[18px]  items-center justify-center uppercase gap-2  p-4 rounded-lg">
-            S’inscrire
-            <div className="w-3 h-3 rotate-180 ">
-              <Image src="/left_arrow.png" alt="arrow" fill={true} />
+          <div
+            className="bg-[#5CD2DD] text-white flex font-cabinet font-bold text-[18px] 
+           items-center justify-center uppercase gap-2  p-4 rounded-lg
+            overflow-hidden before:[transition:width_400ms_ease] cursor-pointer
+           relative  before:absolute before:left-0 before:top-0 before:w-0 before:hover:w-full before:h-full   before:bg-red-400"
+          >
+            <div className="relative z-10 flex items-center justify-center gap-2">
+              S’inscrire
+              <div className="w-3 h-3 rotate-180 ">
+                <Image src="/left_arrow.png" alt="arrow" fill={true} />
+              </div>
             </div>
           </div>
         </div>

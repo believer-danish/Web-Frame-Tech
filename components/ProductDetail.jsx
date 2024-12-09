@@ -1,9 +1,31 @@
 "use client";
+import MyContext from "@/utils/MyContext";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
+
+const imgData = [
+  "/machine1.png",
+  "/machine2.jpg",
+  "/machine3.jpg",
+  "/machine4.jpg",
+];
 
 const ProductDetail = () => {
   const [cnt, setCnt] = useState(1);
+  const [img, setImg] = useState(0);
+  const data = useContext(MyContext);
+
+  const [isLike, setIsLike] = useState(false);
+  const handleLikes = () => {
+    setIsLike((prev) => !prev);
+    if (isLike) data.setLikes((prev) => prev - 1);
+    else data.setLikes((prev) => prev + 1);
+  };
+
+  const handleImage = (id) => {
+    console.log(id);
+    setImg(id);
+  };
   return (
     <section className="w-full h-full flex max-xl:flex-col gap-[25px] px-[30px] pb-20">
       {/* left side */}
@@ -19,10 +41,11 @@ const ProductDetail = () => {
             {Array.from({ length: 4 }).map((e, i) => (
               <div
                 key={i}
-                className="w-max p-2 rounded-lg bg-white overflow-hidden"
+                onClick={() => handleImage(i)}
+                className="w-max p-2 rounded-lg bg-white overflow-hidden cursor-pointer"
               >
                 <Image
-                  src={`${i == 0 ? "/chair2.png" : "/chair3.png"}`}
+                  src={`${i == img ? "/chair2.png" : "/chair3.png"}`}
                   alt="chair image"
                   width={"40"}
                   height={"40"}
@@ -32,7 +55,7 @@ const ProductDetail = () => {
           </div>
           <div className="relative lg:w-[552px] lg:h-[552px] w-full aspect-square ">
             <Image
-              src="/machine1.png"
+              src={imgData[img]}
               alt="machine icon"
               fill={true}
               objectFit="cover"
@@ -74,7 +97,12 @@ const ProductDetail = () => {
                   </span>
                 </h1>
               </div>
-              <div>
+              <div
+                onClick={handleLikes}
+                className={`${
+                  isLike && "bg-red-400"
+                } p-1 rounded-full self-start cursor-pointer motion-preset-pulse motion-duration-1000 `}
+              >
                 <Image
                   src="/heart2.png"
                   alt="heart icon"

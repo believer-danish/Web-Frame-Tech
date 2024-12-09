@@ -30,7 +30,8 @@ const ProductList = () => {
               active == i
                 ? "border-[rgba(0,_147,_208,_1)] text-[rgba(0,_147,_208,_1)] font-bold"
                 : "border-white"
-            }`}
+            }
+            hover:motion-preset-shake  `}
           >
             {product}
           </button>

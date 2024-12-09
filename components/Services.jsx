@@ -18,12 +18,13 @@ const Services = () => {
       {/* Services */}
 
       <div className="flex gap-[86px] max-lg:flex-col">
-        <div className="flex flex-col gap-3 justify-center max-lg:items-center relative before:absolute  before:left-16 before:bg-gray-600 lg:before:h-[1px] before:w-full before:top-6">
+        <div className="flex  flex-col gap-3 justify-center max-lg:items-center relative before:absolute  before:left-16 before:bg-gray-600 lg:before:h-[1px] before:w-full before:top-6">
           <Image
             src="/trolley.png"
             alt="trolley image"
             width={"56"}
             height={"51"}
+            className="motion-preset-wobble motion-duration-2000"
           />
           <h1 className="font-cabinet font-medium text-xl leading-[22px] text-[#393939]  whitespace-pre">
             Livraison & Reprise
@@ -31,7 +32,7 @@ const Services = () => {
           <h2 className="font-geist text-sm text-gray1">Selon vos besoins</h2>
         </div>
 
-        <div className="flex flex-col gap-3 justify-center max-lg:items-center relative before:absolute before:left-16 before:bg-gray-600 lg:before:h-[1px] before:w-full before:top-6">
+        <div className="flex  flex-col gap-3 justify-center max-lg:items-center relative before:absolute before:left-16 before:bg-gray-600 lg:before:h-[1px] before:w-full before:top-6">
           <Image src="/dish.png" alt="dish image" width={"61"} height={"51"} />
           <h1 className="font-cabinet font-medium text-xl leading-[22px] text-[#393939]  whitespace-pre">
             Nettoyage
@@ -39,7 +40,7 @@ const Services = () => {
           <h2 className="font-geist text-sm text-gray1">Selon vos besoins</h2>
         </div>
 
-        <div className="flex flex-col gap-3 justify-center max-lg:items-center relative before:absolute before:left-16 before:bg-gray-600 lg:before:h-[1px] before:w-full before:top-6">
+        <div className="flex  flex-col gap-3 justify-center max-lg:items-center relative before:absolute before:left-16 before:bg-gray-600 lg:before:h-[1px] before:w-full before:top-6">
           <Image
             src="/shoppingcart.png"
             alt="shoppingcart image"
@@ -51,8 +52,14 @@ const Services = () => {
           </h1>
           <h2 className="font-geist text-sm text-gray1">Tout est possible</h2>
         </div>
-        <div className="flex flex-col gap-3 justify-center max-lg:items-center">
-          <Image src="/van.png" alt="van image" width={"62"} height={"54"} />
+        <div className="flex  flex-col gap-3 justify-center max-lg:items-center">
+          <Image
+            src="/van.png"
+            alt="van image"
+            width={"62"}
+            height={"54"}
+            className="motion-preset-wobble motion-duration-2000"
+          />
           <h1 className="font-cabinet font-medium text-xl leading-[22px] text-[#393939]  whitespace-pre">
             Transport & Enlèvement
           </h1>

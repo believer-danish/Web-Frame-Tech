@@ -1,16 +1,18 @@
 "use client";
+import MyContext from "@/utils/MyContext";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 const Header = () => {
   const [sidebar, setSidebar] = useState(false);
+  const data = useContext(MyContext);
   const handleSidebar = () => setSidebar((prev) => !prev);
   return (
     <header className="my-container flex flex-col pt-8 pl-7 pr-5  ">
       <div className="flex items-center justify-between max-md:items-start">
         <div className="flex gap-[11px] items-center max-md:flex-col max-md:items-start  flex-1">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 motion-scale-in-[0.5] motion-translate-x-in-[-120%] motion-translate-y-in-[-60%] motion-opacity-in-[33%] motion-rotate-in-[-1080deg] motion-blur-in-[10px] motion-delay-[0.38s]/scale motion-duration-[0.38s]/opacity motion-duration-[1.20s]/rotate motion-duration-[0.15s]/blur motion-delay-[0.60s]/blur motion-ease-spring-bouncier">
             <Image src="/logo.png" alt="logo" width={"133"} height={"66"} />
           </div>
 
@@ -37,7 +39,7 @@ const Header = () => {
 
         {/*Navigation Links*/}
         <nav
-          className={`${
+          className={`motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur${
             sidebar ? "max-lg:translate-x-[0%]" : "max-lg:translate-x-[-100%]"
           } z-10 max-lg:fixed  max-lg:flex-col max-lg:left-0 max-lg:top-0 max-lg:h-screen max-lg:w-3/4 max-lg:justify-start max-lg:items-start max-lg:p-8
           flex gap-3 w-max max-lg:bg-slate-100 justify-end items-center transition-all font-poppins font-medium text-[14px] [line-height:21px] text-[#3B4347]`}
@@ -72,7 +74,7 @@ const Header = () => {
               />
               <h1 className="whitespace-pre cursor-pointer">Mes favoris</h1>
               <span className="text-[10px] bg-[rgba(202_,210_,213_,0.4)] px-2 rounded-[30px]">
-                24
+                {data.likes}
               </span>
             </div>
           </div>
