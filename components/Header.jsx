@@ -39,7 +39,7 @@ const Header = () => {
 
         {/*Navigation Links*/}
         <nav
-          className={`motion-scale-in-[0.5] motion-rotate-in-[-10deg] motion-blur-in-[10px] motion-delay-[0.75s]/rotate motion-delay-[0.75s]/blur${
+          className={`${
             sidebar ? "max-lg:translate-x-[0%]" : "max-lg:translate-x-[-100%]"
           } z-10 max-lg:fixed  max-lg:flex-col max-lg:left-0 max-lg:top-0 max-lg:h-screen max-lg:w-3/4 max-lg:justify-start max-lg:items-start max-lg:p-8
           flex gap-3 w-max max-lg:bg-slate-100 justify-end items-center transition-all font-poppins font-medium text-[14px] [line-height:21px] text-[#3B4347]`}
